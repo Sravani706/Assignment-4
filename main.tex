@@ -155,7 +155,7 @@ equations are consistent, or inconsistent.
 \end{align}
 \section{Solution}
 \begin{align}
-    \myvec{2&-3}\vec{x}=5\\
+    \myvec{2&-3}\vec{x}=8\\
     \myvec{4&-6}\vec{x}=9
 \end{align}
 The above equations can be expressed as the matrix equation
@@ -175,18 +175,22 @@ is row reduced as follows:
     \xleftrightarrow{R_2\leftarrow{R_2}-4}
     \myvec{1& 0 &\frac{11}{5}\\0&-10& 5}\\
     \xleftrightarrow{R_2\leftarrow \frac{R_2}{10}}
-    \myvec{1&0&\frac{11}{5}\\0&-1&\frac{5}{10}}
-    \end{align}
+    \myvec{1&0&\frac{11}{5}\\0&-1&\frac{5}{10}}\\
+    \xleftrightarrow{R_2 \leftarrow{R_1-R_2}}
+    \myvec{1 & 0 & \frac{11}{5}\\ 1 & 1& \frac{17}{10}}\\
+    \xleftrightarrow{R_2 \leftarrow{R_2-1}}
+    \myvec{1 & 0 & \frac{11}{5} \\ 0 & 0 &\frac{7}{10}}
+\end{align}
  So by reduction of the ($2\times3$) matrix
  \begin{align}
      \myvec{2&-3&8\\4&-6&9}
  \end{align}
- gives matrix with 2 nonzero row, So it's rank is 2. 
+ Rank of augmented matrix is 2. 
    \begin{align}
        \myvec{2&-3\\4&-6}
    \end{align} 
-  Also,the rank of the above matrix is also 2.
-   
+ The rank of the above matrix is 1.\\
+ Hence the rank of two matrix are not equal\\
    $\therefore$ lines are Inconsistent.
   \numberwithin{figure}{section}
 \begin{figure}[H]
